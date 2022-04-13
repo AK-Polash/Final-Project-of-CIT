@@ -1,0 +1,57 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+
+#colorful_area{
+    padding: 0 0 65px 0;
+    #colorful{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: $pure;
+
+        .colorful-tab-menu{
+            padding-left: 0;
+            margin-bottom: 0;
+            .colorful-tab-menu-item{
+                a{
+                    @include font($ff_one , 500 , 20px);
+                    color: $portal;
+                    line-height: 28px;
+                    border-bottom: 2px solid $hash;
+                }
+            }
+            .colorful-tab-menu-item.active{
+                a{
+                    color: $nature;
+                    border-bottom: 2px solid $nature;
+                }
+            }
+        }
+
+        .colorful-tab-container{
+            .colorful-tab-content{
+                @include font($ff_one , 400 , 16px);
+                color: $portal;
+                line-height: 30px;
+                p{
+                    padding: 30px 0 20px 0;
+                }
+                ul{
+                    padding-left: 44px;
+                    margin-bottom: 0;
+                    li{
+                        list-style: disc;
+                    }
+                }
+            }
+        }
+    }
+    #colorful.active{
+        &::before{
+            @include font($ff_one , 500 , 50px);
+            color: $nature;
+            background: $pure;
+        }
+    }
+}

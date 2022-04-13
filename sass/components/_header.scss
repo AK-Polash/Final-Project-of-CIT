@@ -1,0 +1,81 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    transition: all 300ms ease-in-out;
+    .top_header{
+        background: $primary;
+        p{
+            @include font($ff_one, 400 , 16px);
+            color: $pure;
+            padding: 15px 0px;
+        }
+    }
+    .bottom_header{
+        .navbar{
+            background: #fff !important;
+            padding: 22.5px 0px;
+
+            .navbar-brand{
+                @include font($ff_two , 400 , 30px );
+                color: $primary;
+                margin: 0;
+            }
+            // .navbar-toggler{
+            //     // span{}
+            // }
+            #navbarNav{
+                .navbar-nav{
+                    .nav-item{
+                        .nav-link {
+                            @include font($ff_one, 400 , 16px);
+                            color: $secondary;
+                            padding: 0px 20px;
+                            transition: all linear .2s;
+                            &:hover{
+                                color: $primary;
+                            }
+                        }
+                        .nav-link.active{
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+            .right_nav{
+                column-gap: 10px;
+                a{
+                    img{
+                        width: 24px;
+                        height: auto;
+                    }
+                    .search{
+                        width: 22px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.scroll-down header {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+    filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+}
+
+.menu-is-open header {
+	overflow: hidden;
+}
+.menu-is-open header {
+    filter: none;
+}

@@ -1,0 +1,100 @@
+@import '../variables/variable';
+@import '../variables/mixin';
+
+
+#curve_feature{
+    .main_curve_feature{
+        position: relative;
+        > img{
+            position: absolute;
+        }
+        .plus_img{
+            left: -15px;
+            top: 149px;
+        }
+        .curve_img{
+            width: 100%;
+            top: 4%;
+        }
+        .triangle_img{
+            right: 0;
+            top: 12px;
+        }
+        .item_curve_freature{
+            position: relative;
+            .img_feature{
+                display: inline-block;
+                border-radius: 10px;
+                border: 1px dashed $nature;
+                position: absolute;
+                top: 0%;
+                left: 50%;
+                transform: translateX(-50%) rotate(-12.91deg);
+                .box_img_feature{
+                    background: $torrent;
+                    width: 142.46px;
+                    height: 141.84px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 11px;
+                    img{
+                        transform: rotate(12.91deg);
+                    }
+                }
+            }
+            .txt_feature{
+                padding-top: 218px;
+                h5{
+                    @include font($ff_one , 600 , 20px);
+                    color: $secondary;
+                    line-height: 24.2px;
+                    padding-bottom: 10px;
+                }
+                p{
+                    @include font($ff_one , 400 , 16px);
+                    color: $portal;
+                    line-height: 28px;
+                }
+            }
+        }
+        .second_feature{
+            .img_feature{
+                transform: translateX(-50%) rotate(-5.43deg);
+                .box_img_feature{
+                    width: 190.02px;
+                    height: 190.39px;
+                    img{
+                        transform: rotate(5.43deg);
+                    }
+                }
+            }
+            .txt_feature{
+                padding-top: 266px;
+            }
+        }
+        .third_feature{
+            .img_feature{
+                transform: translateX(-50%) rotate(-17.09deg);
+                .box_img_feature{
+                    img{
+                        transform: rotate(17.09deg);
+                    }
+                }
+            }
+        }
+        .fourth_feature{
+            .img_feature{
+                transform: translateX(-50%) rotate(-77.07deg);
+                .box_img_feature{
+                    img{
+                        transform: rotate(77.07deg);
+                    }
+                }
+            }
+            .txt_feature{
+                padding-top: 266px;
+            }
+        }
+    }
+}

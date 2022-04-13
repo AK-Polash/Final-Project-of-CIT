@@ -1,0 +1,39 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+#service{
+    .service_item{
+        width: 100%;
+        background: $pure;
+        margin-top: 65px;
+        border: 1px solid $light;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all linear .2s;
+        overflow: hidden;
+        &:hover {
+            box-shadow: -11px 0 25px 0 rgba(0, 0, 0, 0.3);
+            .box_service{
+                transform: scale(1.01);
+            }
+        }
+        .box_service{
+            text-align: center;
+            padding: 88px 0px;
+            transition: all linear .2s;
+            img{
+                width: 50px;
+                height: auto;
+            }
+            h4{
+                @include font ($ff_one , 600, 25px);
+                color: $secondary;
+                padding: 30px 0px 11px 0px;
+            }
+            p{
+                @include font ($ff_one , 400, 16px);
+                color: $portal;
+            }
+        }
+    }
+}

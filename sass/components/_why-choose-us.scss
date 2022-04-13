@@ -1,0 +1,52 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+#choose_us, .choose_us{
+    .heading{
+        padding-bottom: 66px;
+        h2{
+            @include font($ff_one , 700 , 35px);
+            color: $secondary;
+        }
+    }
+    .item_choose{
+        // img{}
+        h4{
+            @include font($ff_one , 600 , 20px);
+            color: $flat;
+            padding: 49px 0px 10px 0px;
+        }
+        p{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+        }
+    }
+    .main_image{
+        background: url(../images/fruits_for_live.png) no-repeat center / cover scroll;
+        border-radius: 25px;
+        margin-top: 130px;
+        .main_image_inner{
+            padding: 92px 0px 92px 104px;
+            h2{
+                @include font($ff_one , 700 , 45px);
+                color: $secondary;
+            }
+            p{
+                @include font($ff_one , 400 , 16px);
+                color: $portal;
+                padding: 31px 100px 31px 0px;
+            }
+            a{
+                @include font($ff_one , 600 , 20px);
+                @include buttons($pure , $primary , 13px 48px , 10px);
+                border: 2px solid $primary;
+                transition: all linear .2s;
+                &:hover{
+                    border: 2px solid $primary;
+                    color: $primary;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

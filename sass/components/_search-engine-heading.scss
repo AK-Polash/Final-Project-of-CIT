@@ -1,0 +1,55 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+
+.main_shop_category{
+    .heading_srch{
+        h3{
+            @include font($ff_one , 700 , 25px);
+            color: $secondary;
+            line-height: 30.26px;
+        }
+        p{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+            line-height: 19.36px;
+            padding-left: 415px;
+            padding-top: 11px;
+            padding-bottom: 39px;
+        }
+    }
+
+    .left_srch{
+        span{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+            line-height: 28px;
+        }
+        select{
+            @include font($ff_one , 400 , 16px);
+                color: $portal;
+                background: transparent;
+                margin-left: 30px;
+                padding: 14px 77px 14px 16px;
+                border-radius: 10px;
+                border: 1px solid $light;
+                option{
+                    color: $portal;
+                    background: transparent;
+                }
+        }
+    }
+    .right_srch{
+        span{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+            line-height: 28px;
+        }
+        a{
+            svg{}
+        }
+        .extra_space{
+            margin: 0 15px 0 50px;
+        }
+    }
+}

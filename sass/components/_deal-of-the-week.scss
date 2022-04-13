@@ -1,0 +1,46 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+#deal_of_the_week, .choose_us{
+    .heading{
+        padding-bottom: 0px;
+    }
+    .count_down_main{
+        .countdown{
+            display: flex;
+            justify-content: flex-end;
+            div{
+                background: $nature;
+                color: $pure;
+                width: 70px;
+                height: 70px;
+                margin-left: 30px;
+                text-align: center;
+                border-radius: 10px;
+                span{
+                    display: block;
+                }
+                .num{
+                    @include font($ff_one , 600 , 20px);
+                    padding-top: 6px;
+                }
+            }
+            .word{
+                @include font($ff_one , 700 , 20px);
+            }
+            .even_child{
+                background: $subpure;
+                color: $nature;
+            }
+        }
+    }
+    .main_image{
+        background: url(../images/deal_of_the_week.png) no-repeat center / cover scroll;
+        margin-top: 0px;
+        .main_image_inner{
+            p{
+                padding: 11px 100px 30px 0px;
+            }
+        }
+    }
+}

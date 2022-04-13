@@ -1,0 +1,187 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+
+#organic_fruit_tenders{
+    margin-top: 154px;
+    .fruit_tenders_img{
+        img{
+            width: 100%
+        }
+    }
+    .fruit_tenders_img_small{
+        .tenders_small_item{
+            img{
+                width: 100%
+            }
+        }
+    }
+    .heading{
+        h3{
+            @include font($ff_one , 600 , 25px);
+            color: $secondary;
+        }
+        .rating{
+            padding: 22px 0 27px 0;
+            .stars{
+                i{
+                    color: $rating;
+                }
+            }
+            .review{
+                @include font($ff_one , 400 , 16px);
+                color: $portal;
+                padding-left: 20px;
+            }
+            .brand{
+                padding-left: 20px;
+                .brnd{
+                    @include font($ff_one , 600 , 16px);
+                    color: $secondary
+                }
+                span{
+                    @include font($ff_one , 400 , 16px);
+                    color: $portal;
+                }
+            }
+        }
+        
+        .price{
+            h4{
+                @include font($ff_one , 600 , 25px);
+                color: $nature;
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    .texts{
+        p{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+            padding-bottom: 20px
+        }
+        .buttons{
+            .count_btn , .add_to_cart_btn{
+                @include font($ff_one , 600 , 20px);
+                border: 1px solid $patel;
+                padding: 14px 37px 14px 38px;
+                border-radius: 10px;
+                a{
+                    color: $secondary;
+                }
+                .amount{
+                    padding: 0 15px;
+                }
+            }
+            .add_to_cart_btn{
+                padding: 14px 32.89px 14px 33px;
+                color: $pure;
+                background: $nature;
+                border: none;
+                margin-left: 20px;
+                img{
+                    padding-right: 10px;
+                }
+            }
+            .wide_btn{
+                margin: 20px 0;
+                .buy_now_btn{
+                    @include font($ff_one , 600 , 20px);
+                    background: $primary;
+                    color: $pure;
+                    padding: 12px 165px;
+                    border-radius: 10px;
+                    border: 2px solid transparent;
+                    transition: all linear .2s;
+                    &:hover{
+                        background: transparent;
+                        color: $primary;
+                        border: 2px solid $primary;
+                    }
+                }
+            }
+
+            .twin_btn{
+                padding-bottom: 20px;
+                a{
+                    padding: 13px 22.57px 13px 22px;
+                    border: 1px solid $patel;
+                    border-radius: 10px;
+                    img{
+                        padding-right: 9px;
+                    }
+                    span{
+                        @include font($ff_one , 400 , 16px);
+                        color: $portal;
+                    }
+                }
+                .last_btn{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    .over_foot_text_area{
+        .upper{
+            .upper_item{
+                padding-bottom: 15px;
+                .head_line{
+                    @include font($ff_one , 600 , 16px);
+                    color: $secondary;
+                }
+                .values{
+                    @include font($ff_one , 400 , 16px);
+                    color: $portal;
+                    a{
+                        margin-left: 6px;
+                        i{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 10px;
+                            text-align: center;
+                            line-height: 40px;
+                        }
+                        .fa-facebook-f{
+                            background: #395185;
+                            color: $pure;
+                        }
+                        .fa-twitter{
+                            background: #55ACEE;
+                            color: $pure;
+                        }
+                        .fa-pinterest-p{
+                            background: #FF0000;
+                            color: $pure;
+                        }
+                        .fa-globe{
+                            background: #F23F7E;
+                            color: $pure;
+                        }
+                    }
+                }
+            }
+            .extra_space{
+                padding-bottom: 28px;
+            }
+        }
+        .downer{
+            border-top: .5px solid $hash;
+            border-bottom: .5px solid $hash;
+            padding: 16px 0;
+            .sold_by{
+                @include font($ff_one , 600 , 20px);
+                color: $secondary;
+                line-height: 30px;
+            }
+            ul{
+                margin-bottom: 0;
+                li{
+                    list-style-type: disc;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

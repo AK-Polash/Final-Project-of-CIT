@@ -1,0 +1,38 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+
+#banner{
+    background: url(../images/banner_one.png) no-repeat center / cover scroll ;
+    padding: 0px;
+    margin-top: 154px;
+    .banner_text{
+        padding: 235px 0px 135px 0px;
+        h1{
+            @include font($ff_one , 700 , 75px);
+            color: $secondary;
+            margin-bottom: 20px;
+            
+            span{
+                color: $nature;
+            }
+        }
+        p{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+            margin-bottom: 30px;
+            padding-right: 90px;
+        }
+        a{
+            @include font($ff_one , 600 , 20px);
+            @include buttons($pure , $primary , 13px 48px , 10px);
+            border: 2px solid $primary;
+            transition: all linear .2s;
+            &:hover{
+                border: 2px solid $primary;
+                color: $primary;
+                background: transparent;
+            }
+        }
+    }
+}

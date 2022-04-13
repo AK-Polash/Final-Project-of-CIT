@@ -1,0 +1,29 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+
+#all_category_product, .feature_product{
+    .link{
+        button{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+            border: none;
+            padding: 5px 10px;
+            background: transparent;
+            transition: all linear .2s;
+            &:hover{
+                color: $nature;
+            }
+            i{
+                color: $portal !important;
+                transition: all linear .2s;
+                &:hover{
+                    color: $nature !important;
+                }
+            }
+        }
+        .mixitup-control-active{
+            color: $nature;
+        }
+    }
+}

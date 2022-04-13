@@ -1,0 +1,116 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+#featured_product, .feature_product{
+    .heading{
+        padding-bottom: 50px;
+        h2{
+            @include font($ff_one , 700 , 35px);
+            color: $secondary;
+        }
+    }
+    .link{
+        padding-bottom: 50px;
+        a{
+            @include font($ff_one , 400 , 16px);
+            color: $portal;
+            display: inline-block;
+            line-height: 42px;
+            transition: all linear .2s;
+            &:hover{
+                color: $nature;
+                i{
+                    color: $nature;
+                }
+            }
+            i{
+                color: $portal;
+                display: inline-block;
+                padding-left: 20px;
+                transition: all linear .2s;
+            }
+        }
+    }
+    .feature_product_item{
+        &:hover{
+            .img_feature_item{
+                &::after{
+                    top: 0;
+                    opacity: 1;
+                }
+                .reaction{
+                    bottom: 31px;
+                    opacity: 1;
+                }
+            }
+        }
+        .img_feature_item{
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            &::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                opacity: 0;
+                transition: all linear .2s;
+            }
+            img{
+                width: 100%;
+            }
+            .reaction{
+                text-align: center;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+                opacity: 0;
+                transition: all linear .2s;
+                a{
+                    background: $pure;
+                    display: inline-block;
+                    width: 47px;
+                    height: 47px;
+                    border-radius: 50%;
+                    line-height: 43px;
+                    margin: 0px 8px;
+                    transition: all linear .2s;
+                    &:hover{
+                        background: $nature;
+                        svg{
+                            path{
+                                stroke: $pure;
+                            }
+                        }
+                    }
+                    svg{
+                        path{
+                            stroke: $portal;
+                            transition: all linear .2s;
+                        }
+                    }
+                }
+            }
+        }
+        .txt_feature_item{
+            padding-top: 30px;
+            i{
+                color: $tight;
+            }
+            p{
+                @include font($ff_one , 400 , 20px);
+                color: $flat;
+                padding: 12px 0px 17px 0px;
+            }
+            h4{
+                @include font($ff_one , 600 , 20px);
+                color: $flat;
+            }
+        }
+    }
+}

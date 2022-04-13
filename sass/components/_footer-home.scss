@@ -1,0 +1,97 @@
+@import '../variables/mixin';
+@import '../variables/variable';
+
+footer{
+    #footer_home{
+        background: $deafoot;
+        padding: 130px 0px;
+        .heading{
+            p{
+                @include font($ff_two , 400 , 30px);
+                color: $pure;
+            }
+        }
+
+        .contact{
+            .contact_item{
+                display: flex;
+                column-gap: 30px;
+                .box_img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background: $primary;
+                    text-align: center;
+                    line-height: 56px;
+                    // img{}
+                }
+                .flex_shrink{
+                    flex-shrink: 0;
+                }
+                .box_txt{
+                    p{
+                        @include font($ff_one , 400 , 16px);
+                        color: $pure;
+                        padding: 3px 0px;
+                    }
+                    span{
+                        @include font($ff_one , 600 , 20px);
+                        color: $pure;
+                    }
+                }
+            }
+            .extra_pad{
+                padding: 35px 0px 44px 0px;
+            }
+        }
+
+        .title{
+            h3{
+                @include font($ff_one , 600 , 20px);
+                color: $pure;
+            }
+            padding-bottom: 30px;
+        }
+        ul{
+            padding-left: 0px;
+            margin-bottom: 0px;
+            li{
+                a{
+                    @include font($ff_one , 400 , 16px);
+                    color: $light;
+                    display: inline-block;
+                    margin: 13px 0px;
+                    transition: all linear .2s;
+                    &:hover{
+                        color: $pure;
+                    }
+                }
+                form{
+                    margin: 13px 0px;
+                    .box_input{
+                        #email{
+                            @include font($ff_one , 400 , 16px);
+                            color: $portal;
+                            padding: 13.5px 0px 13.5px 16px;
+                            border-radius: 10px 0px 0px 10px;
+                            border: none;
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                        .submit{
+                            @include font($ff_one , 600 , 16px);
+                            background: $nature;
+                            color: $pure;
+                            border: none;
+                            border-radius: 10px;
+                            width: 96px;
+                            height: 52px;
+                            margin-left: -33px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
